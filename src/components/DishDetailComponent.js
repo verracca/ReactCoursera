@@ -23,7 +23,7 @@ class DishDetail extends Component {
           <div key={id}>
             <div>{comment}</div>
             <div>
-              --{author}, {date}
+              --{author}, {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(date)))}
             </div>
           </div>
         ))}

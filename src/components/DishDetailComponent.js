@@ -1,13 +1,5 @@
 import React, { Component } from "react";
-import Menu from "./MenuComponent";
-import {
-  Card,
-  CardImg,
-  CardImgOverlay,
-  CardText,
-  CardBody,
-  CardTitle,
-} from "reactstrap";
+import { Card, CardImg, CardText, CardBody, CardTitle } from "reactstrap";
 
 class DishDetail extends Component {
   renderDish = ({ name, image, description }) => (
@@ -47,9 +39,11 @@ class DishDetail extends Component {
     const { dish } = this.props;
 
     return (
-      <div className="row">
-        <div className="col-12 col-md-5 m-1">{this.renderDish(dish)}</div>
-        <div className="col-12 col-md-5 m-1">{this.renderComments(dish)}</div>
+      <div className="container">
+        <div className="row">
+          <div className="col-12 col-md-5 m-1">{this.renderDish(dish)}</div>
+          <div className="col-12 col-md-5 m-1">{this.renderComments(dish)}</div>
+        </div>
       </div>
     );
   }
